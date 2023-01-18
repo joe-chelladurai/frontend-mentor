@@ -1,0 +1,469 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF7F0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+header, main, footer {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.main-card {
+    text-align: center;
+}
+
+.sub-heading{
+    line-height: 26px;
+    font-size: 1em;
+    padding: 0 3em 2em;
+    margin: 0;
+} 
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25em;
+    margin:0;
+    padding: 0.65em;
+}
+
+.img-logo {
+    height: 48px;
+    width: 48px;
+}
+
+.btn {
+    background-color: #030303;
+    color: #FFF7F0;
+    border: none;
+    padding: 0.93em 2em;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-radius: 2em;
+    font-weight: 700;
+    font-family: Plus Jakarta Sans;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 0.90fr 1fr 1fr;
+    grid-template-areas: 
+    "graphic graphic"
+    "ui-ux apps"
+    "illustrations illustrations"
+    "photography photography"
+    "motion-graphics motion-graphics"
+    ;
+   padding: 0 1em 1em;
+   gap: 1.5em;
+
+   max-width: 500px;
+   margin: 0 auto;
+  
+}
+
+.pattern {
+    position: relative;
+
+    border-radius:10px;
+    padding: 1em;
+    color: #FFF7F0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.pattern img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+}
+
+.pattern p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 1em;
+}
+
+.graphic {
+    grid-area: graphic;
+    background-color: #755CDE;
+    height: 12em;;
+}
+
+.ui-ux {
+    grid-area: ui-ux;
+background-color: #F6A560;
+}
+
+.apps {
+   grid-area: apps;
+    background-color:  #F39E9E;
+}
+
+.illustrations {
+    grid-area: illustrations;
+background-color: #EB7565;
+}
+
+.photography {
+    grid-area: photography;
+background-color: #61C4B7;
+}
+
+.motion-graphics {
+    grid-area: motion-graphics;
+background-color: #552049;
+}
+
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5em;
+    align-items: center;
+}
+
+.about-image {
+    padding: 1em;
+    width: 300px;
+    height: 300px;
+    align-self: center;
+}
+.about-text {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding: 1em;
+    max-width: 500px;
+
+}
+
+.about-description {
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 0.5em;
+    color: #7A746E;
+    font-weight: 500;
+    max-width: 500px;
+}
+
+.work .showcase {
+    height: 180px;
+    width: 270px;
+    border-radius: 10px
+}
+
+.contact {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #030303;
+    color: #FFF7F0;
+    margin: 6em 1em 1em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.contact-title {
+    font-size: 1.5em;
+    font-weight: 700;   
+}
+
+.contact-body{
+    line-height: 1.5;
+}
+
+.secondary {
+    width: fit-content;
+    align-self: center;
+    background-color: #EB7565;
+}
+
+.work {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.work-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.navigation {
+    display:flex; 
+    margin: 2em  1em; 
+    gap: 1em; 
+    justify-content: center;
+}
+.navigation img {
+    width: 14.81px; /* 24 + 24 + 16 = 64*/
+    height: 16px;
+    padding: 24px; 
+    border-radius: 50%;
+    background-color: black;
+
+
+}
+
+.contact {
+    padding: 2em;
+}
+
+@media (min-width: 768px) {
+
+  body {
+    padding: 1.5em;
+  }
+    header, main, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .main-card {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 44px;
+        margin: 0;
+    }
+
+    .sub-heading {
+        width: 573px;
+        font-size: 1.125em;
+    }
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr ;
+        grid-template-areas: 
+        "graphic graphic ui-ux apps"
+        "graphic graphic illustrations illustrations"
+        "photography photography motion-graphics motion-graphics"
+        ;
+       padding: 0 1em 1em;
+       gap: 1.5em;
+       max-width: unset;
+      
+    }
+
+
+
+    .graphic {
+        grid-area: graphic;
+        background-color: #755CDE;
+       
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+        gap: 3em;
+        margin-left: -64px;
+        padding-right: 1.5em;
+       
+    }
+
+    .about-image {
+        width: 364px;
+        height: 364px;
+        position: relative;
+        padding: 0 1em 0 0;
+
+
+        
+    }
+
+    .about-info {
+        padding-right: 2.5em;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-around;
+        
+    }
+
+    .about-text, .about-description{
+        padding: 0;
+    }
+   
+    .about-text{
+        font-size: 2em;
+        padding-top: 0;
+        margin: 0;
+    }
+
+   
+
+
+    .about-description {
+        line-height: 1.5em;
+        font-size: 1.125em;
+
+    }
+
+    .work-title {
+        font-size: 2em;
+    }
+
+    .work .showcase {
+        height: 360px;
+        width: 540px;
+        border-radius: 10px
+    }
+
+
+    .secondary {
+        align-self: start;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    
+    }
+
+    .contact-title {
+        font-size: 2em;
+    }
+ 
+
+    .contact-body {
+        font-size: 1.125em;
+        padding: 0 3em;
+    }
+
+    .contact .secondary {
+        align-self: center;
+    }
+
+
+   
+    
+}
+
+
+
+
+@media (min-width: 1440px) {
+
+  
+    header, main, footer {
+        max-width: 1111px;
+        margin: 0 auto;
+    }
+
+    body {
+        padding: unset;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 0.5fr);
+        grid-template-rows: 0.6fr 0.4fr;
+        grid-template-areas: 
+        "graphic graphic ui-ux apps photography photography"
+        "graphic graphic illustrations illustrations motion-graphics motion-graphics"
+        ;
+       padding: 0 1em 1em;
+       gap: 1.5em;
+       max-width: unset;
+      
+    }
+
+    .main-card {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 {
+        font-size: 56px;
+        margin: 0;
+    }
+
+    .sub-heading {
+        width: 680px;
+        font-size: 1.125em;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        padding: 0 5em 0 3em;
+        justify-content: space-between;
+        margin: 0;
+        height: 320px;
+        align-items: center;
+
+
+    }
+
+    .contact-title {
+        font-size: 2.5em;
+    }
+
+    .contact-info {
+        width: 540px;
+    }
+
+    .contact-body {
+        font-size: 1.125em;
+        padding: 0; 
+    }
+
+    .contact .secondary {
+        align-self: center;
+    }
+
+    footer {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    header {
+        margin-top: 1.5em;
+    }
+
+    .work .showcase {
+        height: 360px;
+        width: 540px;
+        border-radius: 10px
+    }
+
+}
