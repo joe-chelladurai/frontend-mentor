@@ -127,7 +127,6 @@ background-color:white;
     font-weight: 700;
     color: var(--bright-blue);
     text-decoration:underline;
-    text-underline-position: under;   /* this was a fun discovery: https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-position */
     
 }
 
