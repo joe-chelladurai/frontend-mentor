@@ -88,7 +88,7 @@ background-color:white;
     font-weight: 900;
     font-size: 1.375rem;
     color: var(--dark-blue);
-    margin-top: 2rem;
+    margin-top: 1.5em;
     margin-bottom: 1rem;
 }
 
@@ -96,7 +96,7 @@ background-color:white;
     font-weight: 500;
     font-size: 16px;
     line-height: 25px;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     color: var(--desaturated-blue);
     padding: 0;
 }
@@ -155,10 +155,10 @@ background-color:white;
     color:var(--very-pale-blue);
     background-color: var(--bright-blue);
     margin: 0 auto;
-    padding: 1rem 3rem;
-    border-radius: 1rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    padding: 1em 3em;
+    border-radius: 1em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     border: none;
     box-shadow: rgba(149, 157, 165, 0.75) 0px 8px 24px;
     /* above box-shadow is from #0 in https://getcssscan.com/css-box-shadow-examples */
@@ -215,10 +215,18 @@ background-color:white;
         font-size: 14px;
     }
 
+    .text {
+        margin-bottom:1.5em;
+    }
+
     .heading {
+
         font-size: 1.75rem;
     }
 
+    .btn {
+        margin-bottom: 2em;
+    }
     
 .plan {
     font-size: 1rem;
