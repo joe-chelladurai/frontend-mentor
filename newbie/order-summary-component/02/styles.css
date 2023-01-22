@@ -1,0 +1,236 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 16px
+
+### Font
+
+- Family: [Red Hat Display](https://fonts.google.com/specimen/Red+Hat+Display)
+- Weights: 500, 700, 900
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--pale-blue);
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+   
+    /* vscode autocomplete helped me with this, I don't like googling because it is distracting and takes a few decisions like deciding what keywords to type, which links to click, going through different explanations, and trying to understand information. Sometimes googling is very quick, but if I memorize then I don't have to google. Autocomplete is a more realistic option.*/ 
+}
+
+
+
+main {
+
+    width: 20.5rem;
+    
+}
+
+
+.container {
+background-color:white;
+    text-align: center;
+
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.75) 0px 8px 24px;
+}
+
+.hero__image {
+    display: block;
+    width: 100%;
+    border-radius: 1rem 1rem 0 0 ;
+}
+
+.content {
+    padding: 0 1.5em 2em;
+
+}
+
+.content .heading {
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--dark-blue);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content .text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 1rem;
+    color: var(--desaturated-blue);
+    padding: 0;
+}
+
+.card {
+    display: grid;
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    padding: 1em;
+    grid-gap: 1em;
+
+}
+
+.card img {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+
+.card .info {
+    justify-self: start;
+}
+
+.card a {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--bright-blue);
+    text-decoration:underline;
+    text-underline-position: under;
+    
+}
+
+
+
+.plan {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 18.52px;
+}
+
+.price {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.52px;
+}
+
+
+.btn {
+    display: block;
+    font-size: 15px;
+    font-weight: 900;
+    width: 100%;
+    line-height: 19.85px;
+    color:var(--very-pale-blue);
+    background-color: var(--bright-blue);
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.75) 0px 8px 24px;
+    /* above box-shadow is from #0 in https://getcssscan.com/css-box-shadow-examples */
+    /* I changed 0.2 to 0.5 */
+}
+
+
+.cancel {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 19.85px; 
+    color: var(--desaturated-blue);
+}
+
+.cancel:hover,
+.cancel:active {
+    color: var(--dark-blue);
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #766CF1;
+}
+
+.card a:hover,
+.card a:active {
+    text-decoration: none;
+}
+
+@media (min-width: 375px) {
+  
+
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-size:contain;
+    }
+    main {
+
+        width: 28.125rem;
+        
+    }
+    .content {
+   
+        padding: 0 3em 3em;
+
+    } 
+
+    .card {
+        padding: 1.5em; 
+    }
+    .card a {
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    
+.plan {
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 2em;
+    
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--desaturated-blue)
+ 
+}
+}
