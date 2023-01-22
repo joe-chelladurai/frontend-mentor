@@ -1,6 +1,6 @@
 January 17, 2023
 
-Today, I completed most of the challenge. I have learned a lot. I had a lot of practice with flexbox and grid.
+Today, I completed most of the challenge [single page design portfolio]. I have learned a lot. I had a lot of practice with flexbox and grid.
 
 The things I am proud of is my growing ability to work with breakpoints. Using grid was so easy with understading of how grid template areas work.
 
