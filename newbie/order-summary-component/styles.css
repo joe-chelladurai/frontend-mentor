@@ -105,7 +105,7 @@ background-color:white;
     display: grid;
     background-color: var(--very-pale-blue);
     border-radius: 1rem;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
     padding: 1em;
     grid-gap: 1em;
@@ -127,6 +127,7 @@ background-color:white;
     font-weight: 700;
     color: var(--bright-blue);
     text-decoration:underline;
+    text-underline-position: under;
     
 }
 
@@ -210,8 +211,26 @@ background-color:white;
     .card {
         padding: 1.5em; 
     }
+    .card a {
+        font-size: 14px;
+    }
 
     .heading {
         font-size: 28px;
     }
+
+    
+.plan {
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 2em;
+    
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--desaturated-blue)
+ 
+}
 }
