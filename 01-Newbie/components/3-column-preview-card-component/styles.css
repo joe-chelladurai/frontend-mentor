@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+}
+
+.container {
+    width: 327px;
+    display: grid;
+    margin: 6em 0;
+    border-radius: 0.5em;
+    overflow: hidden;
+    background-image: url("./design/mobile-design.jpg");
+    display: none;
+}
+
+.section-design {
+    display: none;
+}
+
+.heading {
+    font-size: 40px;
+    font-family: 'Big Shoulders Display';
+    text-transform: uppercase;
+    color:  hsl(0, 0%, 95%);
+    margin: 0.70em 0;
+}
+
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 25px;
+    margin-bottom: 1.5em;
+}
+
+.sedan {
+    background-color: #E28625;
+}
+.sedan > .btn {
+    color:  #E28625;
+}
+
+.suv {
+    background-color: #006971;
+}
+.suv > .btn {
+    color:  #006971;
+}
+.luxury {
+    background-color: #004140;
+}
+.luxury > .btn {
+    color:  #004140;
+}
+
+.sedan, .suv, .luxury {
+    padding: 3.25em;
+}
+
+.btn {
+    border: none;
+    padding: 0.875em 1.875em;
+    border-radius: 3em;
+    font-size: 1rem;
+    margin: 2em 0 0,5em;
+    font-family: 'Lexend Deca';
+}
