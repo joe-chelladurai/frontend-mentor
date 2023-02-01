@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 0 5em;
+    max-width: 1440px;
+    margin: 0 auto;
+ 
+}
+
+
+.description {
+    color: white;
+}
+.price {
+    font-size: 52px;
+    font-weight: bold;
+    color: white;
+    margin: 0.25em 0;
+}
+.btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25em;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans';
+}
+
+.secondary {
+    background-color: white;
+    color: black;
+}
+
+@media (min-width: 1440px) {
+
+    header {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: 500px; /* temp */
+        grid-template-areas: 
+        "home home home logo"
+      
+        "title title title logo"
+        "subtitle subtitle subtitle logo"
+        
+        
+        ;
+        margin-bottom: 14em;
+    }
+    
+    #home {
+        grid-area: home;
+        padding-top: 1em;
+        font-size: 2rem;
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+    
+    #title{
+        grid-area: title;
+        font-size: 88px;
+    }
+    
+    #subtitle {
+        grid-area: subtitle;
+    }
+    
+    #logo {
+        grid-area: logo;
+        margin-top: -2.5em;
+        height: 29.25em;
+        width: 19.5em;
+    
+    }
+    
+    
+    .container {
+         margin-top: 10em;
+        border: 1px solid tomato;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+        background-color: black;
+        position: relative;
+    
+        z-index: -2;
+        
+    }
+    
+    #illustration {
+        width: 312px;
+        height: 642px;
+        position: relative;
+        bottom: 10em;
+        left: 3em;
+    }
+    
+    
+    
+    .card {
+        margin-top: 10em;
+        border-radius: 10px;
+        background-color: tomato;
+        width: 446px;
+        height: 625px;
+        padding: 2em;
+        position: relative;
+        top: 10em;
+        right: 4em;
+        border-radius: 1em;
+        
+        /* don't use this with position: absolute --x--> height: fit-content; */
+        
+    }
+    
+    #pattern {
+     position: relative;
+     left: -3.5em;
+     z-index: -1;
+     top: 0;
+     height: 468px;
+     width: 312px;
+    }
+    
+    
+    .card > h2 {
+        color: white;
+        margin-bottom: 1em;
+    }
+    
+}

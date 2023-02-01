@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    font-family: 'IBM Plex Sans', sans-serif;
+    height: 100vh;
+    
+}
+
+header {
+    margin-bottom: 20em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+section {
+    width: 100%;
+ 
+}
+
+.container {
+    position: relative;
+    background-color: #191826;
+    height: 37.5em;
+   /* don't set width: 100% */
+    border: 5px solid aqua;    
+    width: 100%;
+}
+
+.mobile {
+    position: absolute;
+    width: 13em;
+    height: 26.875em;
+    top:-10em;
+    left:22.5%;
+    z-index: 1;
+}
+
+.pattern {
+    position: absolute;
+    width: 17.5em;
+    height: 26.25em;
+    top:0;
+    left: 10%;
+  
+}
+
+.card {
+    position: absolute;
+    bottom: -30%;
+    right: 0em;
+ /*   width: 23.4375em;  */
+    width: 375px;
+    background: #fa7453;
+    color: #fcfaf9;
+    border-radius: 12px;
+    padding: 1em;
+    /* don't use this with position: absolute --x--> height: fit-content; */
+}
+
+.card > h2 {
+    color: white;
+    margin: 1em;
+}
+
+.description {
+    color: white;
+    padding: 2em;
+}
+.price {
+    font-size: 52px;
+    font-weight: bold;
+    color: white;
+    margin: 0.25em 0;
+}
+.btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25em;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans';
+}
+
+.secondary {
+    background-color: white;
+    color: black;
+}
+
+@media (min-width: 380px) {
+    .mobile {
+        left: 4em;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        max-width: 50.4375em;
+    }
+
+    
+ 
+}

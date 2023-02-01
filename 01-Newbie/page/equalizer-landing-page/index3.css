@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    background-attachment: fixed;
+    font-family: 'IBM Plex Sans', sans-serif;
+    height: 100vh;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+  /* don't set width: 100% */
+    display: grid;
+    grid-template: repeat(8, 5.94em) / repeat(8, 2.929em);
+    margin: 0 auto;
+}
+
+.illustration {
+    order: 3;
+    width: 100%;
+    grid-column: 3 / 7;
+    grid-row: 1;
+}
+
+.pattern {
+    width: 100%;
+
+    order: 2;
+    grid-column: 2 / -2;
+    grid-row: 2 / auto;
+}
+
+.background {
+    order: 1;
+    border-radius: 10px;
+    background-color: #191826;
+    grid-column: 1 / -1;
+    grid-row: 2/8;
+}
+
+
+
+
+.card {
+    order: 4;
+    background: #fa7453;
+    color: #fcfaf9;
+    border-radius: 12px;
+    padding: 48px;
+    grid-column: 1 / -1;
+    grid-row: 6 / 10;
+    /* don't use this with position: absolute --x--> height: fit-content; */
+}
+
+
+
+.card > h2 {
+    color: white;
+    margin-bottom: 1em;
+}
+
+
+.description {
+    color: white;
+    padding: 4em;
+}
+.price {
+    font-size: 52px;
+    font-weight: bold;
+    color: white;
+    margin: 0.25em 0;
+}
+.btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25em;
+    border: none;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    font-family: 'IBM Plex Sans';
+}
+
+.secondary {
+    background-color: white;
+    color: black;
+}
