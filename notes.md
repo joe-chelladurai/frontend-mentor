@@ -1,13 +1,17 @@
-February 10, 2023
+#### February 10, 2023
 
 This is why it is good to watch a lot of tutorials so you know what to search for:
-My google search query : "how to write javascript conditional in html template literal"
 
-Answer: https://stackoverflow.com/questions/45676974/using-conditionals-inside-template-literals
-Example: <td> ${project.progress || ''} </td> in the main index.html file.
+**My** google search query\*\* : "how to write javascript conditional in html template literal"
+
+**Answer**: https://stackoverflow.com/questions/45676974/using-conditionals-inside-template-literals
+
+**Example**: `<td> ${project.progress || ''} </td>` in the main index.html file.
 I was searching for things like this: "if undefined return blank javascript". But then I remembered the term template literals and conditionals and it helped me search for the right things. This experience is a good example of learning a lot of right content before searching. One line solution is really interesting. I thought it would take multiple lines or some work outside the for loop. It turned out to be really simple.
 
-January 17, 2023
+I made some progress on the skilled-elearning-landing-page. I am getting easily frustrated of cropping images. I am getting a bit bored of the challenges writing html and css.
+
+#### January 17, 2023
 
 Today, I completed most of the challenge [single page design portfolio]. I have learned a lot. I had a lot of practice with flexbox and grid.
 
