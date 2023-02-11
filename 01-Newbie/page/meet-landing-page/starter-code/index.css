@@ -1,0 +1,88 @@
+ @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;900&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    display:flex; 
+    justify-content:center;
+    align-items: center;
+
+}
+
+
+img {
+   
+}
+/* I was dreading the overflowing images, but this fixed it 
+.image1 {
+    margin-left: -2em;
+}
+
+.image2 {
+    margin-right: -2em;
+}
+ 
+
+
+
+.image1, .image2 {
+    width: 300px;
+}
+
+.welcome {
+    max-width: 540px;
+}
+
+.welcome > h1 {
+    font-size: 64px;
+
+    line-height: 1;
+}
+
+.welcome > p {
+    font-weight: 500;
+    color: #87879D;
+}
+
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    
+}
+.btn {
+    display: block;
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 3em;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+}
+
+.primary {
+    background-color: #4D96A9;
+    color: white;
+}
+
+.secondary {
+    background-color: #855FB1;
+    color:white;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 2em 0;
+}
+
+.img-container > img {
+    width: 255px;
+    height: 242px;
+}
+*/

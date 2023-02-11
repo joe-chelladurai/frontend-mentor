@@ -1,0 +1,115 @@
+---
+title: "scrape"
+format: html
+editor: visual
+---
+
+```{r}
+library(rvest)
+library(purrr)
+```
+
+```{r}
+data <- rvest::read_html("https://www.frontendmentor.io/challenges")
+```
+
+https://stackoverflow.com/questions/52158164/webscrape-heading-and-lists-to-a-dataframe-with-rvest
+
+```{r}
+# Heading
+heading <- data |> 
+  html_elements(".Content__Wrapper-sc-f0243o-0") |> 
+  html_elements("h2") |> html_text()
+```
+
+```{r}
+# Difficulty
+difficulty <- data |> 
+ html_elements(".Content__Wrapper-sc-f0243o-0") |> 
+  html_elements(".Align__Wrapper-sc-1l7un05-0") |> 
+  html_elements(".Spacer__Wrapper-sc-1qmp1cv-0") |> 
+  html_elements(".Difficulty__Wrapper-sc-1viqi9z-0") |> html_text()
+  # html_children()
+```
+
+
+```{r}
+# Languages
+languages <- data |> 
+ html_elements(".Content__Wrapper-sc-f0243o-0") |> 
+  html_elements(".Align__Wrapper-sc-1l7un05-0") |> 
+  html_elements(".Spacer__Wrapper-sc-1qmp1cv-0") |> 
+  html_elements(".Align__Wrapper-sc-1l7un05-0") |> 
+  html_text()
+```
+
+
+```{r}
+languages[[1]] 
+```
+```{r}
+library(tidyverse)
+```
+
+```{r}
+languages_df <- languages |> data.frame() |> 
+  mutate(html = str_extract(languages, "HTML")) |> 
+  mutate(css = str_extract(languages, "CSS")) |> 
+  mutate(js = str_extract(languages, "JS")) |> 
+  mutate(api = str_extract(languages, "API"))
+
+languages_df 
+```
+
+
+```{r}
+lang <- languages_df |> 
+  nest(lang = c(html, css, js, api))
+```
+
+```{r}
+lang
+```
+
+
+```{r}
+#Description
+description <- data |> 
+ html_elements(".Content__Wrapper-sc-f0243o-0") |> 
+    html_elements(".Spacer__Wrapper-sc-1qmp1cv-0") |> 
+  html_elements("p") |> html_text()
+```
+
+```{r}
+# Images
+images <-  data |> 
+  html_elements(".image-wrapper") |> 
+  html_elements("a") |> html_children() |> 
+  html_attrs() |> 
+  map_chr("src")
+```
+
+```{r}
+challenges <- data.frame(heading, difficulty, description, images)
+
+challenges <- bind_cols(challenges, lang)
+```
+
+```{r}
+challenges <- challenges |> dplyr::arrange(difficulty)
+```
+
+```{r}
+json <- challenges |> 
+  jsonlite::toJSON()
+```
+
+```{r}
+# use this instead of write_json. This returns a pretty version
+writeLines(json, "challenges2.json")
+```
+
+
+TO DO
+
+      "progress": "complete", /* edit progress values here */

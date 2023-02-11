@@ -6,85 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-      }
+       body {
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+           sans-serif;
+       }
 
-      .projects-completed {
-        display: flex;
-        flex-direction: column;
-      }
+       .projects {
+         /* display: flex;
+         flex-wrap: wrap;
+         gap: 1em; */
+       }
 
-      .button-blur {
-        height: 5em;
-        background-color: royalblue;
-        width: 5em;
-        border-radius: 50%;
-        margin: 0 auto;
-        filter: blur(1.5rem);
-      }
-      :root {
-        --background: #005;
-        --primary: #88d5bf;
-        --secondary: #5d6bf8;
-        --third: #e27fcb;
-      }
+       .card {
+         margin: 0 auto;
+         /* width: 400px; */
+         margin-bottom: 2em;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+         margin: 2em;
+       }
 
-      * {
-        box-sizing: border-box;
-      }
+      .card > * {
+         padding: 0.5em 1em;
+       }
 
-      .container {
-        align-items: center;
-        display: flex;
-        height: 100vh;
-        justify-content: center;
-      }
+       /* replaced this with .card > *
+       .project__difficulty {
+         padding: 0.5em 1em;
+       }
 
-      .shape {
-        background: linear-gradient(
-          45deg,
-          var(--primary) 0%,
-          var(--secondary) 100%
-        );
-        animation: morph 8s ease-in-out infinite;
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        height: 400px;
-        transition: all 1s ease-in-out;
-        width: 400px;
-        z-index: 5;
-      }
+       .project__languages {
+         padding: 0.5em 1em;
+       }
 
-      @keyframes morph {
-        0% {
-          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-          background: linear-gradient(
-            45deg,
-            var(--primary) 0%,
-            var(--secondary) 100%
-          );
-        }
+       .project__description {
+         padding: 0.5em 1em;
+       }
 
-        50% {
-          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-          background: linear-gradient(
-            45deg,
-            var(--third) 0%,
-            var(--secondary) 100%
-          );
-        }
+       */
 
-        100% {
-          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-          background: linear-gradient(
-            45deg,
-            var(--primary) 0%,
-            var(--secondary) 100%
-          );
-        }
-      }
+
+       .project__heading {
+         font-size: 1rem;
+         font-weight: bold;
+         background-color: #D4EAFF;
+         color: white;
+
+         padding: 0.5em; /*overwrites something I guess
+       }
+
+       .projects-completed {
+         display: flex;
+         flex-direction: column;
+       }
+
+
+
+       .button-blur {
+         height: 5em;
+         background-color: royalblue;
+         width: 5em;
+         border-radius: 50%;
+         margin: 0 auto;
+         filter: blur(1.5rem);
+       }
+       :root {
+         --background: #005;
+         --primary: #88d5bf;
+         --secondary: #5d6bf8;
+         --third: #e27fcb;
+       }
+
+       * {
+         box-sizing: border-box;
+       }
+
+       .container {
+         align-items: center;
+         display: flex;
+         height: 100vh;
+         justify-content: center;
+       }
+
+       .shape {
+         background: linear-gradient(
+           45deg,
+           var(--primary) 0%,
+           var(--secondary) 100%
+         );
+         animation: morph 8s ease-in-out infinite;
+         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+         height: 400px;
+         transition: all 1s ease-in-out;
+         width: 400px;
+         z-index: 5;
+       }
+
+       @keyframes morph {
+         0% {
+           border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+           background: linear-gradient(
+             45deg,
+             var(--primary) 0%,
+             var(--secondary) 100%
+           );
+         }
+
+         50% {
+           border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+           background: linear-gradient(
+             45deg,
+             var(--third) 0%,
+             var(--secondary) 100%
+           );
+         }
+
+         100% {
+           border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+           background: linear-gradient(
+             45deg,
+             var(--primary) 0%,
+             var(--secondary) 100%
+           );
+         }
+       }
     </style>
   </head>
   <body>
@@ -126,6 +171,12 @@
       </section>
 
       <section>
+        <h1>Projects loaded dynamically</h1>
+
+        <article id="projects-table" class="projects-table"></article>
+        <article id="projects" class="projects"></article>
+      </section>
+      <!--section>
         <p>
           Fancy border radius from https://codepen.io/myjessijess/pen/MWWgMwL
         </p>
@@ -133,8 +184,49 @@
           <div class="shape"></div>
         </div>
         <div class="button-blur"></div>
-      </section>
+      </section -->
     </main>
     <footer></footer>
+
+    <script type="module">
+      /* import data from "./challenges2.json" assert { type: "json" };  not yet supported in Mozilla*/
+      import { projectsData } from "./data.js";
+      const projects = document.getElementById("projects");
+      const projectsTable = document.getElementById("projects-table");
+  
+
+
+
+      let projectItems = ``;
+      let tableItems = "<table> <th> Title </th> <th> Languages <th> <th> Difficulty </th> <th> Progress </th>";
+      for (let project of projectsData) {
+        projectItems += `
+        <article class="card"> 
+          <div class = "project__heading"> 
+            ${project.heading} 
+          </div>
+          <div class = "project__difficulty">
+            ${project.difficulty} 
+          </div>
+          <div class = "project__languages">
+            ${project.languages}
+          </div>
+          <div class = "project__description">
+            ${project.description}
+          </div>
+        </article>
+        `;
+        tableItems += `
+        <tr> 
+          <td> ${project.heading} <td>  <td> ${project.languages} <td> ${project.difficulty}</td>       <td>        ${project.progress || ''}  </td>
+        </tr>
+        `;
+      }
+
+      tableItems += `</table>`
+
+      projects.innerHTML = projectItems;
+      projectsTable.innerHTML = tableItems;
+    </script>
   </body>
 </html>
