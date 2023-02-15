@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: hsl(257, 40%, 49%);
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+   
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    border: none;
+    padding: 1em 3em;
+    border-radius: 2em;
+}
+
+header, main, footer {
+    max-width: 375px;
+    color: white;
+    margin: 0 auto;
+   
+     
+}
+main {
+     padding: 2.2em;
+     text-align: center;
+}
+
+header {
+    margin-right: auto;
+    padding: 1.5em 1em 0;
+}
+header > img {
+    width: 8em;
+    display: block;
+}
+
+.img-hero {
+    width: 100%;
+    display: block;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+.info > p {
+    line-height: 24px;
+}
+
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | News homepage</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      header, main {
+        width: 375px;
+      
+        margin: 0 auto;
+      }
+     
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .img-hero-mobile {
+        display: block;
+        width: 100%;
+      }
+
+      .img-hero-desktop {
+        display:none;
+      }
+      .img-hero-mobile,
+      .blog-titles,
+      .heading,
+      .text {
+        grid-column: 1/2;
+        grid-row: auto;
+      }
+
+      .blog-titles {
+        gap: 2em;
+      }
+
+      @media (min-width: 1200px) {
+        header {
+          margin: 0 auto;
+          padding: 2em 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 1110px;
+        }
+
+        header > nav {
+          display: flex;
+          list-style-type: none;
+          gap: 2em;
+        }
+        main {
+          width: 1110px;
+          margin: 0 auto;
+        }
+
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr auto;
+          gap: 1em;
+        }
+
+        .img-hero-desktop {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          width: 100%;
+          display: block;
+        }
+
+        .img-hero-mobile {
+          display: none;
+  
+        }
+
+        .blog-titles {
+          display: grid;
+          padding: 1em;
+          grid-column: 3/4;
+          grid-row: 1/3;
+          background-color: black;
+          color: white;
+        }
+
+        .heading {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          font-size: 48px;
+        }
+
+        .text {
+          grid-column: 2/3;
+          grid-row: 2/3;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/images/logo.svg" alt="" />
+      <nav>
+        <li>Home</li>
+        <li>New</li>
+        <li>Popular</li>
+        <li>Trending</li>
+        <li>Categories</li>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <img
+          class="img-hero-desktop"
+          src="./assets/images/image-web-3-desktop.jpg"
+          alt=""
+        />
+        <img
+        class="img-hero-mobile"
+        src="./assets/images/image-web-3-mobile.jpg"
+        alt=""
+      />
+        <h1 class="heading">The Bright Future of Web 3.0</h1>
+        <section class="text">
+          <p class="description">
+            We dive into the next evolution of the web that claims to put the
+            power of the platforms back into the hands of the people. But is it
+            really fulfilling its promise?
+          </p>
+          <button class="btn">READ MORE</button>
+        </section>
+        <section class="blog-titles">
+          <h2>New</h2>
+          <article class="card">
+            <h3>Hydrogen VS Electric Cars</h3>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <article class="card">
+            <h3>The Downsides of AI Artistry</h3>
+            <p>
+              What are the possible adverse effects of on-demand AI image
+              generation?
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Is VC Funding Drying Up?</h3>
+            <p>
+              Private funding by VC firms is down 50% YOY. We take a look at
+              what that means.
+            </p>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    The Bright Future of Web 3.0? Read more New 01 Reviving Retro PCs What
+    happens when old PCs are given modern upgrades? 02 Top 10 Laptops of 2022
+    Our best picks for various needs and budgets. 03 The Growth of Gaming How
+    the pandemic has sparked fresh opportunities.
+  </body>
+</html>
