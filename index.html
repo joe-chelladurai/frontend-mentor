@@ -139,28 +139,48 @@
     <main>
       <section class="projects-completed">
         <h1>Completed</h1>
-        <a href="./01-Newbie/component/qr-code-component/">QR Code Component</a>
-        <a href="./01-Newbie/component/order-summary-component/">
-          Order Summary Component
-        </a>
-        <a href="./01-Newbie/component/3-column-preview-card-component/">
-          3 Column Preview Card Component
-        </a>
-        <a href="./01-Newbie/component/profile-card-component/">
-          Profile Card Component
-        </a>
-        <a href="./01-Newbie/component/single-price-grid-component/">
-          Single Price Grid Component
-        </a>
-        <a href="./01-Newbie/component/stats-preview-card-component/">
-          Stats Preview Card Component
-        </a>
-        <a href="./01-Newbie/page/equalizer-landing-page/">
-          Equalizer Landing Page
-        </a>
-        <a href="./02-Junior/single-page-design-portfolio/starter-code/">
-          Single Page Design Portfolio
-        </a>
+        <ol>
+          <li>
+            <a href="./01-Newbie/component/qr-code-component/"
+              >QR Code Component</a
+            >
+          </li>
+          <li>
+            <a href="./01-Newbie/component/order-summary-component/">
+              Order Summary Component
+            </a>
+          </li>
+          <li>
+            <a href="./01-Newbie/component/3-column-preview-card-component/">
+              3 Column Preview Card Component
+            </a>
+          </li>
+          <li>
+            <a href="./01-Newbie/component/profile-card-component/">
+              Profile Card Component
+            </a>
+          </li>
+          <li>
+            <a href="./01-Newbie/component/single-price-grid-component/">
+              Single Price Grid Component
+            </a>
+          </li>
+          <li>
+            <a href="./01-Newbie/component/stats-preview-card-component/">
+              Stats Preview Card Component
+            </a>
+          </li>
+          <li>
+            <a href="./01-Newbie/page/equalizer-landing-page/">
+              Equalizer Landing Page
+            </a>
+          </li>
+          <li>
+            <a href="./02-Junior/single-page-design-portfolio/starter-code/">
+              Single Page Design Portfolio
+            </a>
+          </li>
+        </ol>
       </section>
 
       <section class="projects-current">
@@ -193,12 +213,10 @@
       import { projectsData } from "./data.js";
       const projects = document.getElementById("projects");
       const projectsTable = document.getElementById("projects-table");
-  
-
-
 
       let projectItems = ``;
-      let tableItems = "<table> <th> Title </th> <th> Languages <th> <th> Difficulty </th> <th> Progress </th>";
+      let tableItems =
+        "<table> <th> Title </th> <th> Languages <th> <th> Difficulty </th> <th> Progress </th>";
       for (let project of projectsData) {
         projectItems += `
         <article class="card"> 
@@ -218,12 +236,14 @@
         `;
         tableItems += `
         <tr> 
-          <td> ${project.heading} <td>  <td> ${project.languages} <td> ${project.difficulty}</td>       <td>        ${project.progress || ''}  </td>
+          <td> ${project.heading} <td>  <td> ${project.languages} <td> ${
+          project.difficulty
+        }</td>       <td>        ${project.progress || ""}  </td>
         </tr>
         `;
       }
 
-      tableItems += `</table>`
+      tableItems += `</table>`;
 
       projects.innerHTML = projectItems;
       projectsTable.innerHTML = tableItems;
